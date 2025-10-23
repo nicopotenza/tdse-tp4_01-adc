@@ -1,0 +1,10 @@
+Resumen de los Tests:
+
+Test	Tick	Media		Desvío
+1	31	3340,07		2,17
+2	118	3340,19		0,92
+3	31	3338,58		2,24
+
+Test 1: Toma las 100 mediciones independientes de a una y la imprime. Esta toma es bloqueante, ya que queda esperando que finalice la medición.
+Test 2: Por cada una de los 100 valores entregados, tomó 16 mediciones independientes y devolvió el promedio de esa medición. Eso mejoró el desvío a costa del tiempo de ejecución. El método de medición es bloqueante como en el test 1.
+Test 3: Toma 100 mediciones pero con la interrupción. Con la interrupción se encarga de almacenar en un vector cada uno de esos valores. Al finalizar, imprime en consola la totalidad de valores. Esto evita el bloqueo de esperar el que finalice cada medición.
